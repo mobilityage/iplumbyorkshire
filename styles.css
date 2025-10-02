@@ -3,16 +3,17 @@
    ======================================== */
 
 :root {
-    --brand-blue: #1e3a8a;
-    --brand-blue-light: #3b82f6;
-    --brand-blue-dark: #1e293b;
-    --brand-yellow: #FDB913;
-    --brand-yellow-dark: #e5a511;
+    --brand-blue: #2c3e50;
+    --brand-blue-light: #4a5f7f;
+    --brand-blue-dark: #1a252f;
+    --brand-accent: #c9a961;
+    --brand-accent-dark: #b89651;
     --text-dark: #1a1a1a;
     --text-medium: #4a5568;
     --text-light: #718096;
-    --bg-light: #f8fafc;
+    --bg-light: #fafafa;
     --bg-white: #ffffff;
+    --border-subtle: #e8e8e8;
 }
 
 * {
@@ -79,21 +80,21 @@ body {
 }
 
 .btn-header {
-    background: var(--brand-yellow);
+    background: var(--brand-accent);
     padding: 0.875rem 1.75rem;
-    border-radius: 8px;
+    border-radius: 4px;
     text-decoration: none;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    box-shadow: 0 2px 8px rgba(253, 185, 19, 0.2);
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .btn-header:hover {
-    background: var(--brand-yellow-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(253, 185, 19, 0.3);
+    background: var(--brand-accent-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(201, 169, 97, 0.15);
 }
 
 .btn-header-text {
@@ -115,7 +116,7 @@ body {
    ======================================== */
 
 .hero {
-    background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-blue-light) 100%);
+    background: linear-gradient(135deg, var(--brand-blue-dark) 0%, var(--brand-blue) 100%);
     position: relative;
     min-height: 85vh;
     display: flex;
@@ -142,29 +143,30 @@ body {
 
 .hero-badge {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     padding: 0.5rem 1.25rem;
-    border-radius: 50px;
+    border-radius: 2px;
     color: white;
     font-size: 0.875rem;
     font-weight: 500;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
     margin-bottom: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .hero-title {
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: 300;
     color: white;
-    line-height: 1.2;
+    line-height: 1.3;
     margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
 }
 
 .hero-title-accent {
-    color: var(--brand-yellow);
+    color: var(--brand-accent);
+    font-weight: 400;
 }
 
 .hero-subtitle {
@@ -183,40 +185,41 @@ body {
 }
 
 .btn-primary-large {
-    background: var(--brand-yellow);
-    color: var(--text-dark);
+    background: var(--brand-accent);
+    color: white;
     padding: 1.125rem 2.5rem;
-    border-radius: 8px;
-    font-weight: 600;
+    border-radius: 2px;
+    font-weight: 500;
     font-size: 1.125rem;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 14px rgba(253, 185, 19, 0.3);
+    border: 1px solid var(--brand-accent);
+    letter-spacing: 0.02em;
 }
 
 .btn-primary-large:hover {
-    background: var(--brand-yellow-dark);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(253, 185, 19, 0.4);
+    background: var(--brand-accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201, 169, 97, 0.2);
 }
 
 .btn-secondary-large {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
+    background: transparent;
     color: white;
     padding: 1.125rem 2.5rem;
-    border-radius: 8px;
-    font-weight: 600;
+    border-radius: 2px;
+    font-weight: 500;
     font-size: 1.125rem;
     text-decoration: none;
     transition: all 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.02em;
 }
 
 .btn-secondary-large:hover {
-    background: rgba(255, 255, 255, 0.25);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+    transform: translateY(-2px);
 }
 
 /* ========================================
@@ -225,7 +228,7 @@ body {
 
 .trust-bar {
     background: var(--bg-white);
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid var(--border-subtle);
     padding: 2rem 2rem;
 }
 
@@ -246,20 +249,20 @@ body {
 
 .trust-icon {
     font-size: 1.5rem;
-    color: var(--brand-yellow);
-    font-weight: 700;
+    color: var(--brand-accent);
+    font-weight: 400;
 }
 
 .trust-text {
     font-size: 0.95rem;
     color: var(--text-medium);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .trust-divider {
     width: 1px;
     height: 30px;
-    background: #e2e8f0;
+    background: var(--border-subtle);
 }
 
 /* ========================================
@@ -282,29 +285,29 @@ body {
 
 .section-title-large {
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 300;
     color: var(--text-dark);
-    line-height: 1.2;
+    line-height: 1.3;
     margin-bottom: 2.5rem;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
 }
 
 .section-title-center {
     font-size: 2.75rem;
-    font-weight: 700;
+    font-weight: 300;
     color: var(--text-dark);
     text-align: center;
     margin-bottom: 1rem;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
 }
 
 .section-title-center-light {
     font-size: 2.75rem;
-    font-weight: 700;
+    font-weight: 300;
     color: white;
     text-align: center;
     margin-bottom: 1rem;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
 }
 
 .section-subtitle {
@@ -369,31 +372,31 @@ body {
 .service-card-large {
     background: var(--bg-white);
     padding: 2.5rem;
-    border-radius: 12px;
+    border-radius: 2px;
     transition: all 0.3s ease;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border-subtle);
 }
 
 .service-card-large:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-    border-color: var(--brand-yellow);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    border-color: var(--brand-accent);
 }
 
 .service-number {
     font-size: 0.875rem;
-    font-weight: 700;
-    color: var(--brand-yellow);
+    font-weight: 400;
+    color: var(--brand-accent);
     margin-bottom: 1.25rem;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
 }
 
 .service-title {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--text-dark);
     margin-bottom: 1rem;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
 }
 
 .service-description {
@@ -420,21 +423,21 @@ body {
 
 .project-card {
     background: var(--bg-white);
-    border-radius: 12px;
+    border-radius: 2px;
     overflow: hidden;
     transition: all 0.3s ease;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border-subtle);
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
 }
 
 .project-image-placeholder {
     width: 100%;
     height: 320px;
-    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -508,19 +511,22 @@ body {
 .feature-icon-elegant {
     width: 60px;
     height: 60px;
-    background: var(--brand-yellow);
-    border-radius: 12px;
+    background: transparent;
+    border: 2px solid var(--brand-accent);
+    border-radius: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
+    color: var(--brand-accent);
     flex-shrink: 0;
     transition: all 0.3s ease;
 }
 
 .feature-item:hover .feature-icon-elegant {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(253, 185, 19, 0.3);
+    background: var(--brand-accent);
+    color: white;
+    transform: scale(1.05);
 }
 
 .feature-content {
@@ -529,7 +535,7 @@ body {
 
 .feature-title {
     font-size: 1.375rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--text-dark);
     margin-bottom: 0.75rem;
 }
@@ -559,23 +565,23 @@ body {
 .testimonial-card-elegant {
     background: var(--bg-light);
     padding: 2.5rem;
-    border-radius: 12px;
+    border-radius: 2px;
     position: relative;
     transition: all 0.3s ease;
     border: 1px solid transparent;
 }
 
 .testimonial-card-elegant:hover {
-    border-color: var(--brand-yellow);
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    border-color: var(--border-subtle);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
 }
 
 .testimonial-quote {
     font-size: 4rem;
     line-height: 1;
-    color: var(--brand-yellow);
-    opacity: 0.3;
+    color: var(--brand-accent);
+    opacity: 0.15;
     position: absolute;
     top: 1rem;
     left: 1.5rem;
@@ -593,7 +599,7 @@ body {
 }
 
 .testimonial-author {
-    border-top: 1px solid #cbd5e0;
+    border-top: 1px solid var(--border-subtle);
     padding-top: 1.25rem;
 }
 
@@ -620,9 +626,10 @@ body {
 
 .areas-title {
     font-size: 2rem;
-    font-weight: 700;
-    color: var(--brand-yellow);
+    font-weight: 300;
+    color: var(--brand-accent);
     margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
 }
 
 .areas-text {
@@ -660,7 +667,7 @@ body {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     padding: 2.5rem;
-    border-radius: 12px;
+    border-radius: 2px;
     text-align: center;
     transition: all 0.3s ease;
     text-decoration: none;
@@ -668,28 +675,23 @@ body {
 }
 
 .contact-method-card:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-4px);
-    border-color: var(--brand-yellow);
-}
-
-.contact-method-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+    border-color: var(--brand-accent);
 }
 
 .contact-method-label {
     font-size: 0.875rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: rgba(255, 255, 255, 0.6);
-    margin-bottom: 0.75rem;
-    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 1rem;
+    font-weight: 400;
 }
 
 .contact-method-value {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 400;
     color: white;
 }
 
@@ -697,7 +699,7 @@ body {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     padding: 3rem;
-    border-radius: 12px;
+    border-radius: 2px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -723,7 +725,7 @@ body {
     width: 100%;
     padding: 1rem 1.25rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
+    border-radius: 2px;
     font-size: 1rem;
     background: rgba(255, 255, 255, 0.08);
     color: white;
@@ -736,28 +738,28 @@ body {
 
 .form-input-elegant:focus {
     outline: none;
-    border-color: var(--brand-yellow);
+    border-color: var(--brand-accent);
     background: rgba(255, 255, 255, 0.12);
 }
 
 .btn-form-submit {
-    background: var(--brand-yellow);
-    color: var(--text-dark);
+    background: var(--brand-accent);
+    color: white;
     padding: 1.125rem 3rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 2px;
     font-size: 1.125rem;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 1rem;
-    box-shadow: 0 4px 14px rgba(253, 185, 19, 0.3);
+    letter-spacing: 0.02em;
 }
 
 .btn-form-submit:hover {
-    background: var(--brand-yellow-dark);
+    background: var(--brand-accent-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(253, 185, 19, 0.4);
+    box-shadow: 0 6px 20px rgba(201, 169, 97, 0.2);
 }
 
 /* ========================================
@@ -776,10 +778,11 @@ body {
 }
 
 .footer-badge {
-    color: var(--brand-yellow);
-    font-weight: 700;
+    color: var(--brand-accent);
+    font-weight: 400;
     font-size: 1.125rem;
     margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
 }
 
 .footer-divider {
@@ -795,7 +798,7 @@ body {
 }
 
 .footer-copyright {
-    color: var(--brand-yellow);
+    color: var(--brand-accent);
     font-size: 0.9375rem;
     margin-top: 1.5rem;
 }
