@@ -6,134 +6,211 @@
     <meta name="description" content="Professional bathroom refits and renovation projects across West Yorkshire. Full project management from Gas Safe registered engineers. Serving Leeds, Bradford, Huddersfield, Halifax and surrounding areas.">
     <title>iplumbyorkshire - Bathroom Refits & Renovation Projects | West Yorkshire</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="font-sans text-gray-800">
+<body>
 
     <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
-            <img src="logo.png" alt="iplumbyorkshire - Plumbing, Heating, Gas" class="w-64 md:w-72 h-auto">
-            <a href="tel:07809443797" class="btn-primary">
-                Call: 0780 944 3797
+    <header class="header-main">
+        <div class="header-container">
+            <img src="logo.png" alt="iplumbyorkshire - Plumbing, Heating, Gas" class="logo">
+            <a href="tel:07809443797" class="btn-header">
+                <span class="btn-header-text">Call Now</span>
+                <span class="btn-header-number">0780 944 3797</span>
             </a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-gradient text-white py-20 px-4 text-center">
-        <div class="max-w-6xl mx-auto">
-            <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-                Bathroom Refits & Renovation Projects Across West Yorkshire
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">West Yorkshire's Renovation Specialists</div>
+            <h1 class="hero-title">
+                Bathroom Refits.<br>
+                Heating Systems.<br>
+                <span class="hero-title-accent">Stress-Free Project Management.</span>
             </h1>
-            <p class="text-lg md:text-xl mb-8 max-w-4xl mx-auto">
-                From initial design to the final tile, we manage your entire project. Professional plumbing, heating and gas engineers who coordinate all the trades, so you don't have to.
+            <p class="hero-subtitle">
+                From initial design to the final tile, we coordinate every trade and manage your entire renovation. One point of contact. Clear communication. Quality guaranteed.
             </p>
-            <div class="flex flex-col sm:flex-row gap-5 justify-center">
-                <a href="tel:07809443797" class="btn-primary text-lg">
-                    Get Your Free Quote: 0780 944 3797
+            <div class="hero-cta">
+                <a href="tel:07809443797" class="btn-primary-large">
+                    Get Your Free Quote
                 </a>
-                <a href="#projects" class="btn-secondary text-lg">
-                    View Our Recent Projects
+                <a href="#projects" class="btn-secondary-large">
+                    View Our Work
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-item">
+                <div class="trust-icon">✓</div>
+                <div class="trust-text">Gas Safe Registered</div>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+                <div class="trust-icon">★</div>
+                <div class="trust-text">Fully Insured</div>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+                <div class="trust-icon">15+</div>
+                <div class="trust-text">Years Experience</div>
             </div>
         </div>
     </section>
 
     <!-- Intro Section -->
-    <section class="py-16 px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="section-heading">
-                Planning a Bathroom Refit or Home Renovation? We'll Handle Everything.
+    <section class="section-intro">
+        <div class="container-narrow">
+            <div class="section-eyebrow">Our Approach</div>
+            <h2 class="section-title-large">
+                We don't just install.<br>We manage your entire project.
             </h2>
-            <div class="max-w-4xl mx-auto text-lg leading-relaxed space-y-4">
-                <p>We're a small team of Gas Safe registered engineers based in West Yorkshire, and we specialise in taking the stress out of renovation projects. Whether it's a complete bathroom transformation, a new heating system, or a full house refurbishment, we manage it from start to finish.</p>
+            <div class="intro-content">
+                <p class="intro-text-large">We're a small team of Gas Safe registered engineers who specialise in taking the stress out of renovation projects. Whether it's a complete bathroom transformation, a new heating system, or a full house refurbishment, we manage it from start to finish.</p>
                 
-                <p class="font-semibold text-brand-blue">That means we coordinate the electricians, tilers, plasterers and any other trades needed. You get one point of contact, clear communication, and a project that runs on time. No chasing multiple contractors, no miscommunication between trades, no headaches.</p>
+                <p class="intro-text-emphasis">That means coordinating electricians, tilers, plasterers and any other trades needed. You get one point of contact, clear communication, and a project that runs on time.</p>
+                
+                <p class="intro-text">No chasing multiple contractors. No miscommunication between trades. No headaches.</p>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="py-16 px-4 bg-gray-50">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="section-heading">What We Do</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="service-card">
-                    <h3 class="text-xl font-bold text-brand-blue mb-4">Bathroom Refits</h3>
-                    <p class="text-gray-600 leading-relaxed">Complete bathroom renovations managed from design through to completion. We handle all plumbing, coordinate tiling, electrics and finishing work.</p>
+    <section class="section-services">
+        <div class="container-wide">
+            <div class="section-eyebrow-center">What We Do</div>
+            <h2 class="section-title-center">Services</h2>
+            
+            <div class="services-grid">
+                <div class="service-card-large">
+                    <div class="service-number">01</div>
+                    <h3 class="service-title">Bathroom Refits</h3>
+                    <p class="service-description">Complete bathroom renovations managed from design through to completion. We handle all plumbing, coordinate tiling, electrics and finishing work.</p>
                 </div>
-                <div class="service-card">
-                    <h3 class="text-xl font-bold text-brand-blue mb-4">Heating Systems</h3>
-                    <p class="text-gray-600 leading-relaxed">New boiler installations, full central heating systems, underfloor heating. All planned and installed to the highest standard.</p>
+                
+                <div class="service-card-large">
+                    <div class="service-number">02</div>
+                    <h3 class="service-title">Heating Systems</h3>
+                    <p class="service-description">New boiler installations, full central heating systems, underfloor heating. All planned and installed to the highest standard.</p>
                 </div>
-                <div class="service-card">
-                    <h3 class="text-xl font-bold text-brand-blue mb-4">Kitchen Renovations</h3>
-                    <p class="text-gray-600 leading-relaxed">All plumbing and gas work for kitchen refits, coordinating with your kitchen fitter and other trades as needed.</p>
+                
+                <div class="service-card-large">
+                    <div class="service-number">03</div>
+                    <h3 class="service-title">Kitchen Renovations</h3>
+                    <p class="service-description">All plumbing and gas work for kitchen refits, coordinating with your kitchen fitter and other trades as needed.</p>
                 </div>
-                <div class="service-card">
-                    <h3 class="text-xl font-bold text-brand-blue mb-4">Full Project Management</h3>
-                    <p class="text-gray-600 leading-relaxed">Taking on a bigger renovation? We can run the whole project, managing all trades and keeping everything on schedule.</p>
+                
+                <div class="service-card-large">
+                    <div class="service-number">04</div>
+                    <h3 class="service-title">Project Management</h3>
+                    <p class="service-description">Taking on a bigger renovation? We can run the whole project, managing all trades and keeping everything on schedule.</p>
                 </div>
-                <div class="service-card">
-                    <h3 class="text-xl font-bold text-brand-blue mb-4">Plumbing & Gas Services</h3>
-                    <p class="text-gray-600 leading-relaxed">Day-to-day repairs, servicing, and installations. Boiler breakdowns, leaking pipes, gas safety certificates - we're here when you need us.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="py-16 px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="section-heading">Why Choose Us</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="feature-icon">✓</div>
-                    <h3 class="text-xl font-bold text-brand-blue mb-3">One Point of Contact</h3>
-                    <p class="text-gray-600">You deal with us throughout. We coordinate electricians, tilers, plasterers and other specialists, so you're not juggling multiple people.</p>
-                </div>
-                <div class="text-center">
-                    <div class="feature-icon">£</div>
-                    <h3 class="text-xl font-bold text-brand-blue mb-3">No Nasty Surprises</h3>
-                    <p class="text-gray-600">Clear quotes upfront. We discuss the project properly before we start, so you know what to expect.</p>
-                </div>
-                <div class="text-center">
-                    <div class="feature-icon">★</div>
-                    <h3 class="text-xl font-bold text-brand-blue mb-3">Clean, Professional Work</h3>
-                    <p class="text-gray-600">We treat your home with respect. Job sites are kept tidy, and we clean up thoroughly at the end of each day.</p>
-                </div>
-                <div class="text-center">
-                    <div class="feature-icon">✓</div>
-                    <h3 class="text-xl font-bold text-brand-blue mb-3">Gas Safe & Fully Insured</h3>
-                    <p class="text-gray-600">All our work meets industry standards. Gas Safe registered, public liability insurance, proper certifications provided.</p>
+                
+                <div class="service-card-large">
+                    <div class="service-number">05</div>
+                    <h3 class="service-title">Plumbing & Gas Services</h3>
+                    <p class="service-description">Day-to-day repairs, servicing, and installations. Boiler breakdowns, leaking pipes, gas safety certificates.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Gallery -->
-    <section id="projects" class="py-16 px-4 bg-gray-50">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="section-heading">Recent Projects</h2>
-            <p class="text-center max-w-3xl mx-auto mb-12 text-lg text-gray-600">See what we've been working on across West Yorkshire</p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="gallery-placeholder">
-                    <div class="text-center p-10 text-gray-400">
-                        <p class="font-semibold mb-2">Your project photos will appear here</p>
-                        <p class="text-sm">Simply add images to the 'gallery' folder</p>
+    <section id="projects" class="section-projects">
+        <div class="container-wide">
+            <div class="section-eyebrow-center">Portfolio</div>
+            <h2 class="section-title-center">Recent Projects</h2>
+            <p class="section-subtitle">Bathrooms, heating systems and full renovations across West Yorkshire</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image-placeholder">
+                        <div class="project-placeholder-text">
+                            <p class="project-placeholder-title">Your Projects</p>
+                            <p class="project-placeholder-subtitle">Photos will appear here</p>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Bathroom Renovation</h3>
+                        <p class="project-location">Huddersfield</p>
                     </div>
                 </div>
-                <div class="gallery-placeholder">
-                    <div class="text-center p-10 text-gray-400">
-                        <p class="font-semibold mb-2">Bathroom Renovation</p>
-                        <p class="text-sm">Huddersfield</p>
+                
+                <div class="project-card">
+                    <div class="project-image-placeholder">
+                        <div class="project-placeholder-text">
+                            <p class="project-placeholder-title">Heating System</p>
+                            <p class="project-placeholder-subtitle">Installation Project</p>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Full Central Heating</h3>
+                        <p class="project-location">Harrogate</p>
                     </div>
                 </div>
-                <div class="gallery-placeholder">
-                    <div class="text-center p-10 text-gray-400">
-                        <p class="font-semibold mb-2">Heating System Install</p>
-                        <p class="text-sm">Harrogate</p>
+                
+                <div class="project-card">
+                    <div class="project-image-placeholder">
+                        <div class="project-placeholder-text">
+                            <p class="project-placeholder-title">Kitchen Refit</p>
+                            <p class="project-placeholder-subtitle">Plumbing & Gas</p>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Kitchen & Utility</h3>
+                        <p class="project-location">Holmfirth</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section-why">
+        <div class="container-narrow">
+            <div class="section-eyebrow-center">Why Work With Us</div>
+            <h2 class="section-title-center">Our Commitment</h2>
+            
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-icon-elegant">✓</div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">One Point of Contact</h3>
+                        <p class="feature-text">You deal with us throughout. We coordinate all the specialists, so you're not juggling multiple people.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon-elegant">£</div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Transparent Pricing</h3>
+                        <p class="feature-text">Clear quotes upfront. We discuss the project properly before we start, so you know what to expect.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon-elegant">★</div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Respect for Your Home</h3>
+                        <p class="feature-text">Job sites kept tidy, thorough clean-up at the end of each day. We treat your home as if it were our own.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon-elegant">✓</div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Fully Certified</h3>
+                        <p class="feature-text">Gas Safe registered, public liability insurance, all proper certifications provided as standard.</p>
                     </div>
                 </div>
             </div>
@@ -141,69 +218,91 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="py-16 px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="section-heading">What Our Customers Say</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="testimonial-card">
-                    <p class="italic text-gray-600 mb-4 leading-relaxed">"Fantastic job. Great price. Thanks Tom. 10 out of 10."</p>
-                    <p class="font-bold text-brand-blue">Steve, Huddersfield</p>
+    <section class="section-testimonials">
+        <div class="container-narrow">
+            <div class="section-eyebrow-center">Client Testimonials</div>
+            <h2 class="section-title-center">What People Say</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card-elegant">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Fantastic job. Great price. Thanks Tom. 10 out of 10.</p>
+                    <div class="testimonial-author">
+                        <p class="testimonial-name">Steve</p>
+                        <p class="testimonial-location">Huddersfield</p>
+                    </div>
                 </div>
-                <div class="testimonial-card">
-                    <p class="italic text-gray-600 mb-4 leading-relaxed">"Very easy to deal with, offering advice when asked. Tom's work was of high standard and he was careful to clean up thoroughly each day."</p>
-                    <p class="font-bold text-brand-blue">Frazer, Harrogate</p>
+                
+                <div class="testimonial-card-elegant">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Very easy to deal with, offering advice when asked. Tom's work was of high standard and he was careful to clean up thoroughly each day.</p>
+                    <div class="testimonial-author">
+                        <p class="testimonial-name">Frazer</p>
+                        <p class="testimonial-location">Harrogate</p>
+                    </div>
                 </div>
-                <div class="testimonial-card">
-                    <p class="italic text-gray-600 mb-4 leading-relaxed">"Professional, courteous and reliable. Very happy with the job. Would recommend to anyone needing work. Would certainly use again."</p>
-                    <p class="font-bold text-brand-blue">Michael, Holmfirth</p>
+                
+                <div class="testimonial-card-elegant">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Professional, courteous and reliable. Very happy with the job. Would recommend to anyone needing work. Would certainly use again.</p>
+                    <div class="testimonial-author">
+                        <p class="testimonial-name">Michael</p>
+                        <p class="testimonial-location">Holmfirth</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Service Areas -->
-    <section class="bg-brand-blue text-white py-12 px-4 text-center">
-        <div class="max-w-5xl mx-auto">
-            <h3 class="text-2xl md:text-3xl font-bold text-brand-yellow mb-6">Covering West Yorkshire</h3>
-            <p class="text-lg leading-relaxed">We work throughout West Yorkshire, including Leeds, Bradford, Huddersfield, Halifax, Wakefield, Harrogate, Holmfirth, Hebden Bridge, Todmorden, Dewsbury, Batley, Keighley and surrounding areas. If you're planning a project and want to know if we can help, just give us a call.</p>
+    <section class="section-areas">
+        <div class="container-narrow">
+            <h3 class="areas-title">Covering West Yorkshire</h3>
+            <p class="areas-text">We work throughout West Yorkshire, including Leeds, Bradford, Huddersfield, Halifax, Wakefield, Harrogate, Holmfirth, Hebden Bridge, Todmorden, Dewsbury, Batley, Keighley and surrounding areas.</p>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 px-4 bg-gray-50">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="section-heading">Ready to Start Your Project?</h2>
-            <p class="text-center mb-12 text-lg text-gray-600">Get in touch for a free, no-obligation quote. We'll come out, discuss what you're looking to do, and give you an honest assessment of costs and timescales.</p>
+    <section id="contact" class="section-contact">
+        <div class="container-narrow">
+            <div class="section-eyebrow-center">Get In Touch</div>
+            <h2 class="section-title-center-light">Ready to Start Your Project?</h2>
+            <p class="contact-intro">Get in touch for a free, no-obligation quote. We'll come out, discuss what you're looking to do, and give you an honest assessment of costs and timescales.</p>
             
-            <div class="grid md:grid-cols-2 gap-6 mb-12">
-                <div class="contact-card">
-                    <h3 class="text-xl font-bold text-brand-blue mb-4">Call Us</h3>
-                    <a href="tel:07809443797" class="contact-link">0780 944 3797</a>
-                </div>
-                <div class="contact-card">
-                    <h3 class="text-xl font-bold text-brand-blue mb-4">Email Us</h3>
-                    <a href="mailto:iplumbyorkshire@outlook.com" class="contact-link break-all">iplumbyorkshire@outlook.com</a>
-                </div>
+            <div class="contact-methods">
+                <a href="tel:07809443797" class="contact-method-card">
+                    <div class="contact-method-icon">📞</div>
+                    <div class="contact-method-label">Call Us</div>
+                    <div class="contact-method-value">0780 944 3797</div>
+                </a>
+                
+                <a href="mailto:iplumbyorkshire@outlook.com" class="contact-method-card">
+                    <div class="contact-method-icon">✉</div>
+                    <div class="contact-method-label">Email Us</div>
+                    <div class="contact-method-value">iplumbyorkshire@outlook.com</div>
+                </a>
             </div>
 
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-                <div class="mb-6">
-                    <label for="name" class="block font-bold mb-2 text-gray-700">Your Name</label>
-                    <input type="text" id="name" name="name" required class="form-input">
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form-elegant">
+                <div class="form-group">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" id="name" name="name" required class="form-input-elegant">
                 </div>
-                <div class="mb-6">
-                    <label for="email" class="block font-bold mb-2 text-gray-700">Email Address</label>
-                    <input type="email" id="email" name="email" required class="form-input">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" required class="form-input-elegant">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required class="form-input-elegant">
+                    </div>
                 </div>
-                <div class="mb-6">
-                    <label for="phone" class="block font-bold mb-2 text-gray-700">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required class="form-input">
+                <div class="form-group">
+                    <label for="message" class="form-label">Tell Us About Your Project</label>
+                    <textarea id="message" name="message" required rows="6" class="form-input-elegant"></textarea>
                 </div>
-                <div class="mb-6">
-                    <label for="message" class="block font-bold mb-2 text-gray-700">Tell Us About Your Project</label>
-                    <textarea id="message" name="message" required rows="6" class="form-input resize-y"></textarea>
-                </div>
-                <button type="submit" class="btn-primary text-lg">
+                <button type="submit" class="btn-form-submit">
                     Send Enquiry
                 </button>
             </form>
@@ -211,12 +310,13 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-brand-blue text-white py-12 px-4 text-center">
-        <div class="max-w-5xl mx-auto">
-            <p class="text-brand-yellow font-bold text-lg mb-4">Gas Safe Registered | Fully Insured</p>
-            <p class="mb-4"><strong>Areas Covered:</strong> Leeds, Bradford, Huddersfield, Halifax, Wakefield, Harrogate, Holmfirth, Hebden Bridge, Todmorden, Dewsbury, Batley, Keighley and throughout West Yorkshire</p>
-            <p class="mb-6"><strong>Services:</strong> Bathroom refits, kitchen plumbing, heating systems, boiler installations, full renovations, project management, plumbing repairs, gas safety certificates</p>
-            <p class="text-brand-yellow mt-8">&copy; 2025 iplumbyorkshire. All rights reserved.</p>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-badge">Gas Safe Registered | Fully Insured</div>
+            <div class="footer-divider"></div>
+            <p class="footer-text"><strong>Services:</strong> Bathroom refits, kitchen plumbing, heating systems, boiler installations, full renovations, project management, plumbing repairs, gas safety certificates</p>
+            <div class="footer-divider"></div>
+            <p class="footer-copyright">&copy; 2025 iplumbyorkshire. All rights reserved.</p>
         </div>
     </footer>
 
