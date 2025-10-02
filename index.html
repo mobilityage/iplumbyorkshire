@@ -132,48 +132,96 @@
             <h2 class="section-title-center">Recent Projects</h2>
             <p class="section-subtitle">Bathrooms, heating systems and full renovations across West Yorkshire</p>
             
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image-placeholder">
-                        <div class="project-placeholder-text">
-                            <p class="project-placeholder-title">Your Projects</p>
-                            <p class="project-placeholder-subtitle">Photos will appear here</p>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Bathroom Renovation</h3>
-                        <p class="project-location">Huddersfield</p>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image-placeholder">
-                        <div class="project-placeholder-text">
-                            <p class="project-placeholder-title">Heating System</p>
-                            <p class="project-placeholder-subtitle">Installation Project</p>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Full Central Heating</h3>
-                        <p class="project-location">Harrogate</p>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image-placeholder">
-                        <div class="project-placeholder-text">
-                            <p class="project-placeholder-title">Kitchen Refit</p>
-                            <p class="project-placeholder-subtitle">Plumbing & Gas</p>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Kitchen & Utility</h3>
-                        <p class="project-location">Holmfirth</p>
-                    </div>
-                </div>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be automatically loaded here -->
             </div>
         </div>
     </section>
+
+    <script>
+        // ============================================
+        // AUTOMATIC GALLERY SYSTEM
+        // ============================================
+        // Simply add your image filenames to this array
+        // Format: "type-location-description.jpg"
+        // Examples: "bathroom-huddersfield-ensuite.jpg", "heating-harrogate-boiler.jpg"
+        
+        const projectImages = [
+            // Add your image filenames here, one per line:
+            // "bathroom-huddersfield-main.jpg",
+            // "heating-leeds-central.jpg",
+            // "kitchen-holmfirth-refit.jpg",
+        ];
+
+        // ============================================
+        // AUTO-GENERATION CODE (don't edit below)
+        // ============================================
+        
+        function parseFilename(filename) {
+            // Remove file extension
+            const nameWithoutExt = filename.replace(/\.[^/.]+$/, "");
+            
+            // Split by hyphens or underscores
+            const parts = nameWithoutExt.split(/[-_]/);
+            
+            if (parts.length >= 2) {
+                const type = parts[0].charAt(0).toUpperCase() + parts[0].slice(1);
+                const location = parts[1].charAt(0).toUpperCase() + parts[1].slice(1);
+                const description = parts.slice(2).join(' ');
+                
+                return {
+                    title: description ? `${type} - ${description}` : `${type} Renovation`,
+                    location: location
+                };
+            }
+            
+            return {
+                title: "Project",
+                location: nameWithoutExt
+            };
+        }
+
+        function loadGallery() {
+            const grid = document.getElementById('projectsGrid');
+            
+            if (projectImages.length === 0) {
+                // Show placeholder if no images
+                grid.innerHTML = `
+                    <div class="project-card">
+                        <div class="project-image-placeholder">
+                            <div class="project-placeholder-text">
+                                <p class="project-placeholder-title">Your Projects Will Appear Here</p>
+                                <p class="project-placeholder-subtitle">Upload photos to the gallery folder and add filenames to the array</p>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Coming Soon</h3>
+                            <p class="project-location">West Yorkshire</p>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Generate project cards from image array
+            projectImages.forEach(filename => {
+                const info = parseFilename(filename);
+                const card = document.createElement('div');
+                card.className = 'project-card';
+                card.innerHTML = `
+                    <img src="gallery/${filename}" alt="${info.title}" class="project-image" loading="lazy">
+                    <div class="project-info">
+                        <h3 class="project-title">${info.title}</h3>
+                        <p class="project-location">${info.location}</p>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Load gallery when page loads
+        document.addEventListener('DOMContentLoaded', loadGallery);
+    </script>
 
     <!-- Why Choose Us -->
     <section class="section-why">
